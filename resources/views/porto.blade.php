@@ -1,10 +1,9 @@
 <x-layout.layout-type1>
-    <x-component.navbar-type1 />
     <div
         class="mainsect w-full h-screen flex justify-center items-center mask-image-linear-gradient-to-b mask-opacity-100 mask-color-black-700">
         <div class="frontsect fixed h-full w-full flex flex-col items-center top-44 text-white drop-shadow-lg">
-            <h1 class="text-[125px] font-bold pb-0 mb-0">ZXSTTM</h1>
-            <p class="text-4xl font-semibold">Help you bring your ideas to life</p>
+            <h1 class="text-[80px] sm:text-[125px] font-bold pb-0 mb-0">ZXSTTM</h1>
+            <p class="text-2xl sm:text-4xl font-semibold">Help you bring your ideas to life</p>
         </div>
         <div class="flex h-full w-full justify-end">
             <img class="pointer-events-none w-full h-full object-cover"
@@ -12,13 +11,16 @@
         </div>
     </div>
 
-    <x-component.page-section title="About Me" psid="about">
+    <x-component.page-section psid="about">
+        <x-slot:title>About Me</x-slot:title>
         <div class="flex flex-row h-full overflow-y-hidden">
-            <img class="flex-1" src="{{ asset('images/NHT-removebg-preview.png') }}" alt="Profile Picture">
-            <div class="items-center justify-center content-center align-middle">
-                <h3 class="text-3xl text-white py-1 leading-9 m-0">Hello, I'm Thoriq. <br> A Mobile & Backend
+            <img class="hidden sm:block flex-1 scale-90 sm:scale-95"
+                src="{{ asset('images/NHT-removebg-preview.png') }}" alt="Profile Picture">
+            <div
+                class="flex flex-row flex-wrap overflow-x-scroll align-start content-start items-start justify-start  lg:content-center lg:items-center">
+                <h3 class="text-2xl sm:text-3xl text-white py-1 leading-9 m-0">Hello, I'm Thoriq. <br> Mobile & Backend
                     Developer.</h3>
-                <p class=" text-2xl text-white text-justify py-1 leading-9 m-0">
+                <p class=" text-xl sm:text-2xl text-white text-justify py-1 leading-9 m-0">
                     I'm a college student studying informatics, and I have a strong interest in UI/UX design and mobile
                     development. I enjoy learning new technologies and applying them to create engaging and functional
                     interfaces for different platforms. I use tools such as Figma and Adobe Illustrator for design, and
@@ -33,8 +35,9 @@
         </div>
     </x-component.page-section>
 
-    <x-component.page-section title="PROJECTS" psid="project" x-data="scrollContainer">
-        <div class="flex flex-row h-full w-full overflow-x-scroll hover:cursor-grab shadow-[inset_0_10px_10px_rgba(20,20,20,.6)]"
+    <x-component.page-section psid="project" x-data="scrollContainer">
+        <x-slot:title>Projects</x-slot:title>
+        <div class="flex flex-row h-full w-full overflow-x-scroll hover:cursor-grab shadow-[inset_0_10px_10px_rgba(20,20,20,.6)] rounded-xl"
             x-ref="container">
             <x-component.card-type1 img="{{ asset('images/project-1.jpg') }}" title="Project 1" destination="/" />
             <x-component.card-type1 img="{{ asset('images/project-1.jpg') }}" title="Project 2" destination="/" />
@@ -44,7 +47,8 @@
         </div>
     </x-component.page-section>
 
-    <x-component.page-section title="Contact Me" psid="contact">
+    <x-component.page-section psid="contact">
+        <x-slot:title>Contact Me</x-slot:title>
         <div class="flex flex-col items-center justify-center">
             <h3 class="text-3xl text-white py-1 leading-9 m-0">Let's work together!</h3>
             <p class="text-2xl text-white text-justify py-1 leading-9 m-0">
@@ -53,9 +57,9 @@
                 opportunities and collaborations. You can reach me via email or social media, and I'll get back to you
                 as soon as possible. Thank you for your interest in my work, and I look forward to hearing from you!
             </p>
-            <div class="flex flex-row h-full w-full items-center justify-evenly">
+            <div class="flex flex-row h-[50%] w-full items-center justify-center">
                 <a href="mailto:naufalhusainalt@gmail.com" target=”_blank”
-                    class="items-center justify-center content py-1 m-0">
+                    class="items-center justify-center content py-1 m-5 w-fit hover:scale-105 hover:shadow-sm ">
                     <div class="">
                         <svg class="h-20 w-20 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -63,9 +67,20 @@
                             <polyline points="22,6 12,13 2,6" />
                         </svg>
                     </div>
-                    <h3 class="text-2xl text-white text-center leading-9 py-2">Email</h3>
                 </a>
-                <a href="https://www.linkedin.com/in/nhthaar/" target=”_blank” class="py-1 m-0">
+                <a href="https://www.instagram.com/nhthaar/" target=”_blank”
+                    class="items-center justify-center content py-1 m-5 w-fit hover:scale-105 hover:shadow-sm ">
+                    <div>
+                        <svg class="h-20 w-20 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                        </svg>
+                    </div>
+                </a>
+                <a href="https://www.linkedin.com/in/nhthaar/" target=”_blank”
+                    class="items-center justify-center content py-1 m-5 w-fit hover:scale-105 hover:shadow-sm ">
                     <div>
                         <svg class="h-20 w-20 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -74,7 +89,6 @@
                             <circle cx="4" cy="4" r="2" />
                         </svg>
                     </div>
-                    <h3 class="text-2xl text-white text-center leading-9 py-2">LinkedIn</h3>
                 </a>
             </div>
         </div>

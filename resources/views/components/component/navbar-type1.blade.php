@@ -1,12 +1,12 @@
-<div class="fixed self-center items-center top-6 w-11/12 flex justify-between z-10">
-    <a class=" text-white text-2xl font-bold px-2 mix-blend-difference" href="/">ZXSTTM</a>
-    <div class="hidden md:block">
-        <a class=" text-white text-xl font-bold px-3 py-0" href="#about">About</a>
-        <a class=" text-white text-xl font-bold px-3 py-0" href="#project">Project</a>
-        <a class=" text-white text-xl font-bold px-3 py-0" href="#contact">Contact</a>
+<div class="fixed self-center items-center top-0 py-3 w-11/12 flex justify-between z-10">
+    <a class=" hover:scale-105 text-white text-2xl font-bold px-2 mix-blend-difference" href="/">ZXSTTM</a>
+    <div class="hidden sm:block">
+        <a class=" text-white text-xl font-bold px-3 py-3 hover:underline" href="#about">About</a>
+        <a class=" text-white text-xl font-bold px-3 py-3 hover:underline" href="#project">Project</a>
+        <a class=" text-white text-xl font-bold px-3 py-3 hover:underline" href="#contact">Contact</a>
 
     </div>
-    <div class=" text-white hover:cursor-pointer block md:hidden mix-blend-difference">
+    <div class=" text-white hover:cursor-pointer block sm:hidden mix-blend-difference">
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
                 d="M4 6C4 5.44772 4.44772 5 5 5H19C19.5523 5 20 5.44772 20 6C20 6.55228 19.5523 7 19 7H5C4.44772 7 4 6.55228 4 6Z"
